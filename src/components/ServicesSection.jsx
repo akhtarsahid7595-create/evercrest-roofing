@@ -5,7 +5,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Roof Repairs & Replacement",
       desc: "Durable fixes for leaks, damaged tiles and structural roof problems.",
-      img: "/images/service_roof_replacement.jpg", href: "/roof-repairs-dublin/"
+      img: "/images/roof-repairs-client-work.png", href: "/roof-repairs-dublin/"
     },
     {
       title: "Flat Roofing",
@@ -25,7 +25,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Roof Cleaning & Treatment",
       desc: "Moss removal and protective roof treatment.",
-      img: "/images/service_roof_repair.jpg"
+      img: "/images/roof-cleaning-client-work.png"
     },
     {
       title: "Fascia, Soffit & Guttering",

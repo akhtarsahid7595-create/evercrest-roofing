@@ -8,7 +8,7 @@ export default function WhoWeAre({ onOpenQuote }) {
         {/* Left Photo Container */}
         <div 
           className="h-[300px] sm:h-[390px] rounded-[10px] bg-cover bg-center shadow-md overflow-hidden"
-          style={{ backgroundImage: "url('/images/service_roof_replacement.jpg')" }}
+          style={{ backgroundImage: "url('/images/about-evercrest-client-work.png')" }}
         />
 
         {/* Right Content Column */}
