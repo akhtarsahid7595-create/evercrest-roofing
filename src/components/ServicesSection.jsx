@@ -10,7 +10,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Flat Roofing",
       desc: "Professional flat-roof repair and replacement solutions.",
-      img: "/images/service_flat_roof_epdm.jpg", href: "/flat-roofing-dublin/"
+      img: "/images/flat-roof-client-work.png", href: "/flat-roofing-dublin/"
     },
     {
       title: "Dry Verge & Ridge Systems",
