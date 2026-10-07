@@ -7,7 +7,7 @@ export default function Hero({ onOpenQuote }) {
       <div className="absolute inset-0 z-0">
         <img
           src="/images/hero_roof_banner.jpg"
-          alt="Evercrest Roofing Dublin"
+          alt="Evercrest Roofing Dublin & Leinster"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061320]/95 via-[#061320]/80 to-[#061320]/50" />
@@ -23,12 +23,12 @@ export default function Hero({ onOpenQuote }) {
 
           {/* H1 Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-[68px] font-black text-white tracking-tight leading-[1.02] font-heading">
-            Expert Roof Repairs in Dublin City & County
+            Expert Roof Repairs in Dublin & Leinster
           </h1>
 
           {/* Paragraph Copy */}
           <p className="text-[#D0DDE8] text-base sm:text-lg font-normal leading-relaxed">
-            Reliable roofing, leak repairs, chimney work, flat roofing, guttering and roof maintenance for homes and businesses across Dublin and surrounding counties.
+            Reliable roofing, leak repairs, chimney work, flat roofing, guttering and roof maintenance for homes and businesses across Dublin and Leinster.
           </p>
 
           {/* Dual Action Buttons */}
