@@ -35,7 +35,7 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "VELUX Roof Windows",
       desc: "VELUX roof window installation and replacement on tile and slate roofs.",
-      img: "/images/velux-roof-windows.png"
+      img: "/images/velux-roof-windows-installation.png"
     }
   ];
 
