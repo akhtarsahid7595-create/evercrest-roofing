@@ -57,6 +57,8 @@ export default function ServicesSection({ onOpenQuote }) {
               className="card-jg cursor-pointer group"
             >
               <div 
+                role="img"
+                aria-label={`${srv.title} service example`}
                 className="h-[155px] bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                 style={{ backgroundImage: `url('${srv.img}')` }}
               />

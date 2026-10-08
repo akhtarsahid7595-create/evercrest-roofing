@@ -11,9 +11,18 @@ export default function SeoHead({ title, description, path = '/', service, busin
       tag.setAttribute('content', content);
     };
     setMeta('description', description);
-    setMeta('og:title', title);
-    setMeta('og:description', description);
-    setMeta('og:url', `${SITE_URL}${path}`);
+    const setProperty = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) { tag = document.createElement('meta'); tag.setAttribute('property', property); document.head.appendChild(tag); }
+      tag.setAttribute('content', content);
+    };
+    setProperty('og:title', title);
+    setProperty('og:description', description);
+    setProperty('og:url', `${SITE_URL}${path}`);
+    setProperty('og:type', 'website');
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', title);
+    setMeta('twitter:description', description);
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
     canonical.href = `${SITE_URL}${path}`;
