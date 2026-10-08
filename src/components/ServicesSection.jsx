@@ -31,6 +31,11 @@ export default function ServicesSection({ onOpenQuote }) {
       title: "Fascia, Soffit & Guttering",
       desc: "Rainwater system repairs, cleaning and replacement.",
       img: "/images/service_guttering.jpg", href: "/gutter-repairs-dublin/"
+    },
+    {
+      title: "VELUX Roof Windows",
+      desc: "VELUX roof window installation and replacement on tile and slate roofs.",
+      img: "/images/velux-roof-windows.png"
     }
   ];
 
