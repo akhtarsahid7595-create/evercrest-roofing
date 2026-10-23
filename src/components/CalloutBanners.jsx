@@ -8,7 +8,7 @@ export default function CalloutBanners({ onOpenQuote }) {
       <section className="relative bg-slate-950 text-white py-20 px-4 text-center overflow-hidden border-t border-slate-800">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/hero_luxury_bathroom.jpg" 
+            src="/hero_luxury_bathroom.webp" 
             alt="Peter's Window Cleaning Banner" 
             className="w-full h-full object-cover filter brightness-30 contrast-125"
           />

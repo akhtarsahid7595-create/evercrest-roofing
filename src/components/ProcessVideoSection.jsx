@@ -22,7 +22,7 @@ export default function ProcessVideoSection({ onOpenQuote }) {
         <div className="relative bg-black rounded-2xl border border-slate-800 overflow-hidden shadow-2xl group max-w-4xl mx-auto">
           <div className="relative aspect-video w-full flex items-center justify-center bg-slate-950">
             <img 
-              src="/hero_luxury_bathroom.jpg" 
+              src="/hero_luxury_bathroom.webp" 
               alt="Peter's Window Cleaning Hot Wash Showcase" 
               className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
             />

@@ -6,7 +6,7 @@ export default function Hero({ onOpenQuote }) {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero_roof_banner.jpg"
+          src="/images/hero_roof_banner.webp"
           alt="Evercrest Roofing Dublin & Leinster"
           className="w-full h-full object-cover object-center"
         />

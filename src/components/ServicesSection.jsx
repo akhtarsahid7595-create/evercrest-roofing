@@ -5,37 +5,37 @@ export default function ServicesSection({ onOpenQuote }) {
     {
       title: "Roof Repairs & Replacement",
       desc: "Durable fixes for leaks, damaged tiles and structural roof problems.",
-      img: "/images/roof-repairs-client-work.png", href: "/roof-repairs-dublin/"
+      img: "/images/roof-repairs-client-work.webp", href: "/roof-repairs-dublin/"
     },
     {
       title: "Flat Roofing",
       desc: "Professional flat-roof repair and replacement solutions.",
-      img: "/images/flat-roof-client-work.png", href: "/flat-roofing-dublin/"
+      img: "/images/flat-roof-client-work.webp", href: "/flat-roofing-dublin/"
     },
     {
       title: "Dry Verge & Ridge Systems",
       desc: "Secure, low-maintenance protection for roof edges and ridges.",
-      img: "/images/service_dry_verge.jpg"
+      img: "/images/service_dry_verge.webp"
     },
     {
       title: "Chimney & Valley Repairs",
       desc: "Leadwork, repointing and repairs to vulnerable roof joints.",
-      img: "/images/service_slate_chimney.jpg", href: "/chimney-repairs-dublin/"
+      img: "/images/service_slate_chimney.webp", href: "/chimney-repairs-dublin/"
     },
     {
       title: "Roof Cleaning & Treatment",
       desc: "Moss removal and protective roof treatment.",
-      img: "/images/roof-cleaning-client-work.png"
+      img: "/images/roof-cleaning-client-work.webp"
     },
     {
       title: "Fascia, Soffit & Guttering",
       desc: "Rainwater system repairs, cleaning and replacement.",
-      img: "/images/service_guttering.jpg", href: "/gutter-repairs-dublin/"
+      img: "/images/service_guttering.webp", href: "/gutter-repairs-dublin/"
     },
     {
       title: "VELUX Roof Windows",
       desc: "VELUX roof window installation and replacement on tile and slate roofs.",
-      img: "/images/velux-roof-windows-installation.png"
+      img: "/images/velux-roof-windows-installation.webp", href: "/velux-window-repairs-dublin/"
     }
   ];
 

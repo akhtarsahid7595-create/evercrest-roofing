@@ -2,17 +2,17 @@ import React from 'react';
 
 export default function GallerySection({ onOpenQuote }) {
   const projectImages = [
-    { src: '/images/client-work-01.png', alt: 'Flat roof installation with rooflights in Dublin' },
-    { src: '/images/client-work-02.png', alt: 'Slate roof and Velux roof window work' },
-    { src: '/images/client-work-03.png', alt: 'Slate roof repair and roof window installation' },
-    { src: '/images/client-work-04.png', alt: 'Roof membrane and batten installation' },
-    { src: '/images/client-work-05.png', alt: 'Completed flat roof with rooflights' },
-    { src: '/images/client-work-06.png', alt: 'Roofline and gable-end roofing work' },
-    { src: '/images/client-work-07.png', alt: 'Flat roof detailing around rooflights' },
-    { src: '/images/client-work-08.png', alt: 'Roof replacement with breathable roofing membrane' },
-    { src: '/images/client-work-09.png', alt: 'Scaffolding and roof repair project' },
-    { src: '/images/client-work-10.png', alt: 'Roof stripped back during replacement work' },
-    { src: '/images/client-work-11.png', alt: 'New roof edge and guttering work' }
+    { src: '/images/client-work-01.webp', alt: 'Flat roof installation with rooflights in Dublin' },
+    { src: '/images/client-work-02.webp', alt: 'Slate roof and Velux roof window work' },
+    { src: '/images/client-work-03.webp', alt: 'Slate roof repair and roof window installation' },
+    { src: '/images/client-work-04.webp', alt: 'Roof membrane and batten installation' },
+    { src: '/images/client-work-05.webp', alt: 'Completed flat roof with rooflights' },
+    { src: '/images/client-work-06.webp', alt: 'Roofline and gable-end roofing work' },
+    { src: '/images/client-work-07.webp', alt: 'Flat roof detailing around rooflights' },
+    { src: '/images/client-work-08.webp', alt: 'Roof replacement with breathable roofing membrane' },
+    { src: '/images/client-work-09.webp', alt: 'Scaffolding and roof repair project' },
+    { src: '/images/client-work-10.webp', alt: 'Roof stripped back during replacement work' },
+    { src: '/images/client-work-11.webp', alt: 'New roof edge and guttering work' }
   ];
 
   return (

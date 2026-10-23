@@ -7,7 +7,7 @@ export default function TradeHero({ onOpenQuote }) {
       {/* Full-Bleed Background Image (Exact Rosewood Style) */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/hero_luxury_bathroom.jpg" 
+          src="/hero_luxury_bathroom.webp" 
           alt="Peter's Window Cleaning Work Showcase" 
           className="w-full h-full object-cover filter brightness-50 contrast-110"
         />

@@ -134,7 +134,7 @@ export default function BeforeAfterSlider({ onOpenBooking }) {
           >
             {/* AFTER IMAGE (Background - Full width) */}
             <img 
-              src="/hero_luxury_bathroom.jpg" 
+              src="/hero_luxury_bathroom.webp" 
               alt="After Refurbishment Final Result" 
               className="absolute inset-0 w-full h-full object-cover select-none"
             />
