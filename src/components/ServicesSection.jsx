@@ -8,6 +8,11 @@ export default function ServicesSection({ onOpenQuote }) {
       img: "/images/roof-repairs-client-work.webp", href: "/roof-repairs-dublin/"
     },
     {
+      title: "Roof Replacement",
+      desc: "Clear advice and practical replacement solutions for worn or damaged roofs.",
+      img: "/images/service_roof_replacement.webp", href: "/roof-replacement-dublin/"
+    },
+    {
       title: "Flat Roofing",
       desc: "Professional flat-roof repair and replacement solutions.",
       img: "/images/flat-roof-client-work.webp", href: "/flat-roofing-dublin/"
