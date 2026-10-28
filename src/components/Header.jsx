@@ -26,15 +26,15 @@ export default function Header({ onOpenQuote }) {
 
   return (
     <header className="sticky top-0 w-full bg-white border-b border-[#E1E7ED] z-50 h-[72px] lg:h-[78px] flex items-center shadow-sm">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-[6%] w-full flex justify-between items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-[6%] w-full flex justify-start items-center">
         
         {/* Brand Logo matching Navy Blue graphic */}
         <a href={homePrefix || '#home'} className="flex items-center group shrink-0" aria-label="Evercrest Roofing home">
-          <EvercrestLogo variant="light" size="small" className="scale-100 origin-left" />
+          <EvercrestLogo variant="light" size="small" className="site-logo" />
         </a>
 
         {/* Desktop Links */}
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-bold text-[#0A1E30] font-heading">
+        <nav className="hidden lg:flex items-center gap-6 ml-auto text-sm font-bold text-[#0A1E30] font-heading">
             <a href={homeLink('about')} className="hover:text-[#3B6991] transition-colors">About Us</a>
           <div className="relative group">
             <a href={homeLink('services')} className="inline-flex items-center gap-1 hover:text-[#3B6991] transition-colors" aria-haspopup="true">
@@ -76,7 +76,7 @@ export default function Header({ onOpenQuote }) {
         </nav>
 
         {/* Free Quote CTA Button */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ml-auto lg:ml-8">
           <button
             onClick={onOpenQuote}
             className="mobile-header-quote hidden lg:inline-flex btn-jg bg-[#0F2942] hover:bg-[#3B6991] text-xs sm:text-sm py-2.5 px-5 shadow-md"

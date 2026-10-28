@@ -9,10 +9,10 @@ export default function EvercrestLogo({ variant = 'light', size = 'normal', clas
   const isSmall = size === 'small';
 
   return (
-    <div className={`flex items-center gap-1.5 sm:gap-2.5 ${className}`}>
+    <div className={`flex items-center gap-2 ${className}`}>
       {/* Recreated Vector SVG Logo Emblem matching Navy Blue uploaded graphic */}
       <svg 
-        className={`${isSmall ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'} shrink-0 overflow-visible`} 
+          className={`${isSmall ? 'w-9 h-9 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'} shrink-0 overflow-visible`} 
         viewBox="0 0 200 160" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
@@ -51,15 +51,15 @@ export default function EvercrestLogo({ variant = 'light', size = 'normal', clas
 
       {/* Brand Typography in Deep Navy & Steel Blue */}
       <div className="flex flex-col">
-        <span className={`${isSmall ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'} font-black tracking-tight uppercase font-heading leading-none`} style={{ color: mainNavyColor }}>
+        <span className={`${isSmall ? 'text-[1.15rem] sm:text-xl' : 'text-xl sm:text-2xl'} font-extrabold tracking-[-0.03em] uppercase font-heading leading-none`} style={{ color: mainNavyColor }}>
           EVERCREST
         </span>
-        <div className="flex items-center gap-1.5 mt-0.5 sm:mt-1">
-          <div className="h-[2px] flex-grow bg-[#3B6991]"></div>
+        <div className="flex items-center gap-2 mt-1">
+          <div className="h-px w-5 bg-[#3B6991]"></div>
           <span className={`${isSmall ? 'text-[9px] sm:text-xs' : 'text-[10px] sm:text-xs'} font-black tracking-widest uppercase font-heading`} style={{ color: isDark ? '#A0C4E4' : '#0F2942' }}>
             ROOFING
           </span>
-          <div className="h-[2px] flex-grow bg-[#3B6991]"></div>
+          <div className="h-px w-5 bg-[#3B6991]"></div>
         </div>
       </div>
     </div>
