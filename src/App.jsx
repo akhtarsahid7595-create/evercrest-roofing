@@ -65,13 +65,17 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  if (servicePages[path]) return <ServicePage data={servicePages[path]} onOpenQuote={handleOpenQuotePage} />;
-  if (locationPages[path]) return <LocationPage data={locationPages[path]} onOpenQuote={handleOpenQuotePage} />;
-  if (path === '/blog/' || path === '/blog/what-to-do-when-your-roof-is-leaking/') return <BlogPage articleView={path !== '/blog/'} onOpenQuote={handleOpenQuotePage} />;
-
+  // The quote view must take priority over route rendering. CTA buttons on
+  // service, location and blog pages set #quote while keeping their URL path;
+  // checking those routes first would immediately render the original page
+  // again and make the form appear not to open.
   if (currentPage === 'quote') {
     return <QuotePage onGoHome={handleGoHome} />;
   }
+
+  if (servicePages[path]) return <ServicePage data={servicePages[path]} onOpenQuote={handleOpenQuotePage} />;
+  if (locationPages[path]) return <LocationPage data={locationPages[path]} onOpenQuote={handleOpenQuotePage} />;
+  if (path === '/blog/' || path === '/blog/what-to-do-when-your-roof-is-leaking/') return <BlogPage articleView={path !== '/blog/'} onOpenQuote={handleOpenQuotePage} />;
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans antialiased text-[#17201E] selection:bg-[#6FB52C] selection:text-white overflow-x-hidden">
