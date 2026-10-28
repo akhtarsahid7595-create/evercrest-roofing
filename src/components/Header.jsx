@@ -71,6 +71,7 @@ export default function Header({ onOpenQuote }) {
             </div>
           </div>
           <a href={homeLink('faq')} className="hover:text-[#3B6991] transition-colors">FAQ</a>
+          <a href="/blog/" className="hover:text-[#3B6991] transition-colors">Blog</a>
           <a href={homeLink('contact')} className="hover:text-[#3B6991] transition-colors">Contact Us</a>
         </nav>
 
@@ -141,6 +142,7 @@ export default function Header({ onOpenQuote }) {
               )}
             </div>
             <a href={homeLink('faq')} onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">FAQ</a>
+            <a href="/blog/" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Blog</a>
             <a href={homeLink('contact')} onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100">Contact Us</a>
           </nav>
           

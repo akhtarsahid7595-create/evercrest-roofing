@@ -15,6 +15,7 @@ import QuotePage from './components/QuotePage';
 import ServicePage from './components/ServicePage';
 import LocationPage from './components/LocationPage';
 import SeoHead from './components/SeoHead';
+import BlogPage from './components/BlogPage';
 
 const servicePages = {
   '/velux-window-repairs-dublin/': { path: '/velux-window-repairs-dublin/', title: 'VELUX Window Repairs Dublin | Roof Window Repairs & Replacement | Evercrest Roofing', description: 'VELUX window repairs and replacement across Dublin and Leinster for leaking, damaged or worn roof windows. Request a clear assessment from Evercrest Roofing.', name: 'VELUX Window Repairs', heading: 'VELUX Window Repairs and Replacement in Dublin', intro: 'Practical help for leaking, damaged or worn VELUX and roof windows across Dublin and Leinster.', subheading: 'Roof window repairs with clear advice', body: 'A leaking or damaged roof window can allow water into the room below and may be connected to the window, flashing or surrounding roof. Evercrest Roofing assesses the visible problem and explains whether a repair or replacement is the practical next step.', points: ['Leaking VELUX windows', 'Damaged roof-window flashing', 'Worn or faulty roof windows', 'Repair and replacement assessments'], faqs: [{ q: 'What are common signs that a VELUX window needs attention?', a: 'Water marks, drafts, damaged seals, condensation or visible damage around the frame can indicate that a roof window should be assessed.' }, { q: 'Can a leaking VELUX window be repaired?', a: 'Some leaks and surrounding flashing problems may be repairable. The suitable option depends on the condition of the window and the roof junction.' }, { q: 'When might a VELUX window need replacement?', a: 'Replacement may be considered when the window is badly worn, damaged or no longer practical to repair. An assessment can clarify the options.' }] },
@@ -66,6 +67,7 @@ export default function App() {
 
   if (servicePages[path]) return <ServicePage data={servicePages[path]} onOpenQuote={handleOpenQuotePage} />;
   if (locationPages[path]) return <LocationPage data={locationPages[path]} onOpenQuote={handleOpenQuotePage} />;
+  if (path === '/blog/' || path === '/blog/what-to-do-when-your-roof-is-leaking/') return <BlogPage articleView={path !== '/blog/'} onOpenQuote={handleOpenQuotePage} />;
 
   if (currentPage === 'quote') {
     return <QuotePage onGoHome={handleGoHome} />;
