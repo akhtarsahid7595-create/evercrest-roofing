@@ -29,8 +29,8 @@ export default function Header({ onOpenQuote }) {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-[6%] w-full flex justify-between items-center">
         
         {/* Brand Logo matching Navy Blue graphic */}
-        <a href={homePrefix || '#home'} className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center group shrink-0" aria-label="Evercrest Roofing home">
-          <EvercrestLogo variant="light" size="small" className="scale-95 sm:scale-105 lg:scale-100 origin-center" />
+        <a href={homePrefix || '#home'} className="flex items-center group shrink-0" aria-label="Evercrest Roofing home">
+          <EvercrestLogo variant="light" size="small" className="scale-100 origin-left" />
         </a>
 
         {/* Desktop Links */}

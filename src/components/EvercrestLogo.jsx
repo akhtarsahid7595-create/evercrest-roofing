@@ -9,7 +9,7 @@ export default function EvercrestLogo({ variant = 'light', size = 'normal', clas
   const isSmall = size === 'small';
 
   return (
-    <div className={`flex items-center gap-2 sm:gap-3 ${className}`}>
+    <div className={`flex items-center gap-1.5 sm:gap-2.5 ${className}`}>
       {/* Recreated Vector SVG Logo Emblem matching Navy Blue uploaded graphic */}
       <svg 
         className={`${isSmall ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-12 sm:h-12'} shrink-0 overflow-visible`} 
