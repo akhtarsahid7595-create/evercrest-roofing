@@ -120,3 +120,26 @@
   box-shadow: 0 10px 25px rgba(15, 41, 66, 0.1);
   transform: translateY(-3px);
 }
+/* Blog reading layout: explicit rules keep article headings and imagery visible in every build. */
+.blog-article h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: #0A1E30;
+  font-family: var(--font-heading, inherit);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.blog-article p {
+  margin-bottom: 1.5rem;
+  color: #526577;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+.blog-hero-image,
+.blog-card-image {
+  display: block;
+  background: #E8EEF2;
+}
