@@ -11,6 +11,9 @@ export default function Header({ onOpenQuote }) {
   const services = [
     { label: 'Roof Repairs & Replacement', href: '/roof-repairs-dublin/' },
     { label: 'Flat Roofing', href: '/flat-roofing-dublin/' },
+    { label: 'Slate Roof Repair', href: '/slate-roof-repair-dublin/' },
+    { label: 'Fascia and Soffit Repair', href: '/fascia-soffit-repair-dublin/' },
+    { label: 'Gutter Replacement', href: '/gutter-replacement-dublin/' },
     { label: 'Dry Verge & Ridge Systems', href: '#services' },
     { label: 'Chimney & Valley Repairs', href: '/chimney-repairs-dublin/' },
     { label: 'Roof Cleaning & Treatment', href: '#services' },
