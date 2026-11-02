@@ -9,6 +9,7 @@ const guides = {
     description: 'A practical guide to the factors that affect new roof and roof replacement costs in Ireland, including size, materials, access and condition.',
     eyebrow: 'Roof replacement · Cost guide',
     intro: 'What affects the price of a new roof, and what to ask before accepting a quote.',
+    image: '/images/guide-new-roof-cost.png',
     sections: [
       ['Why roof replacement prices vary', 'There is no single price for every roof. A small roof over an extension is very different from a large, complex house roof with several valleys, chimneys or roof windows. The final cost depends on the size and shape of the roof, its current condition, the covering selected, access to the property and the work needed underneath the visible surface. A useful quote should explain those factors rather than offering a vague figure with no detail.'],
       ['The main parts of a new roof cost', 'A roof replacement may include removing the existing covering, checking the roof structure, fitting breathable membrane and battens, installing new tiles or slates, renewing leadwork and completing the roof edges. Gutters, fascia, soffits, chimneys and roof windows may also affect the scope when they meet or depend on the roof. Not every project needs all of these items, so the property should be assessed before a final price is agreed.'],
@@ -25,6 +26,7 @@ const guides = {
     description: 'A practical guide to flat roof materials, common problems and the questions to ask before arranging a flat roof repair or replacement in Dublin.',
     eyebrow: 'Flat roofing · Practical guide',
     intro: 'A simple explanation of flat roof coverings, condition checks and the next step when problems appear.',
+    image: '/images/guide-flat-roof-materials.png',
     sections: [
       ['Why flat roof material matters', 'Flat roofs are designed differently from pitched roofs, so the covering and the way water is directed away from the surface are important. A suitable material should match the roof design, its falls, edges, outlets and the way the building is used. A leak around one area does not always mean the full roof needs replacing, but the wider condition should be checked before applying a quick patch.'],
       ['Common flat roof problems', 'Leaks may develop around seams, edges, outlets, flashing and roof penetrations. Standing water, blistering, cracks, loose coverings and damaged upstands can also indicate that a flat roof needs attention. Water can travel beneath a covering before appearing inside the property, so the visible stain may not identify the exact entry point.'],
@@ -45,6 +47,7 @@ export default function GuidePage({ path, onOpenQuote }) {
     <main>
       <section className="bg-[#0A1E30] text-white py-20 sm:py-28 px-4 sm:px-[6%]"><div className="max-w-4xl mx-auto"><p className="eyebrow-jg text-[#7FB1D0]">Evercrest Roofing · Dublin and Leinster</p><h1 className="text-4xl sm:text-6xl font-black font-heading leading-tight mt-4">{guide.title}</h1><p className="text-slate-300 mt-6 text-lg max-w-2xl">{guide.intro}</p></div></section>
       <article className="max-w-4xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+        <img src={guide.image} alt={guide.title} loading="eager" className="blog-hero-image w-full h-64 sm:h-96 object-cover rounded-2xl mb-10" />
         <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#3B6991] mb-8">{guide.eyebrow}</p>
         <div className="blog-article max-w-none">{guide.sections.map(([heading, body]) => <section key={heading}><h2>{heading}</h2><p>{body}</p></section>)}</div>
         <div className="mt-10 flex flex-wrap gap-3">{guide.links.map(link => <a key={link.href} href={link.href} className="btn-outline-jg text-[#0F2942] border-[#0F2942]">{link.label}</a>)}</div>
