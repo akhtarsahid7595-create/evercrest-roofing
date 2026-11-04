@@ -51,6 +51,12 @@ export default function GallerySection({ onOpenQuote }) {
           ))}
         </div>
 
+        <div className="mt-9 text-center">
+          <a href="/our-work/" className="inline-flex items-center rounded-md border-2 border-[#0A2943] px-6 py-3 font-heading font-bold text-[#0A2943] transition hover:bg-[#0A2943] hover:text-white">
+            View all our work
+          </a>
+        </div>
+
       </div>
     </section>
   );

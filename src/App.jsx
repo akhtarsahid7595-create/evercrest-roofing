@@ -18,6 +18,7 @@ import SeoHead from './components/SeoHead';
 import BlogPage from './components/BlogPage';
 import GuidePage from './components/GuidePage';
 import TrustReviewsSection from './components/TrustReviewsSection';
+import WorkShowcasePage from './components/WorkShowcasePage';
 
 const servicePages = {
   '/slate-roof-repair-dublin/': { path: '/slate-roof-repair-dublin/', title: 'Slate Roof Repair Dublin | Slate Roofing Repairs | Evercrest Roofing', description: 'Slate roof repairs in Dublin for slipped, cracked or damaged slates, flashing and roof leaks. Request a clear assessment from Evercrest Roofing.', name: 'Slate Roof Repair', heading: 'Slate Roof Repair in Dublin', intro: 'Practical repairs for damaged, slipped or worn slate roofing across Dublin and Leinster.', subheading: 'Protecting slate roofs with clear advice', body: 'Slate roofs can develop leaks when slates slip or crack, fixings fail or flashing around roof junctions deteriorates. Evercrest Roofing assesses the visible problem and explains whether a local repair or wider work is the practical next step.', points: ['Slipped or cracked slates', 'Slate roof leak repairs', 'Flashing around slate roofs', 'Repair and condition assessments'], faqs: [{ q: 'What can cause a slate roof to leak?', a: 'Slipped or cracked slates, failed fixings, damaged flashing and problems around chimneys or roof windows can all allow water into a slate roof.' }, { q: 'Can a slate roof be repaired instead of replaced?', a: 'A local repair may be suitable when the problem is limited. The condition and extent of the damage determine the appropriate option.' }, { q: 'Should damaged slates be repaired quickly?', a: 'Early attention can help limit water entry and reduce the risk of wider damage to the roof structure or interior of the property.' }] },
@@ -78,6 +79,7 @@ export default function App() {
     return <QuotePage onGoHome={handleGoHome} />;
   }
 
+  if (path === '/our-work/') return <WorkShowcasePage onOpenQuote={handleOpenQuotePage} />;
   if (path === '/blog/how-much-does-a-new-roof-cost-in-ireland/' || path === '/blog/flat-roof-materials-guide/') return <GuidePage path={path} onOpenQuote={handleOpenQuotePage} />;
   if (servicePages[path]) return <ServicePage data={servicePages[path]} onOpenQuote={handleOpenQuotePage} />;
   if (locationPages[path]) return <LocationPage data={locationPages[path]} onOpenQuote={handleOpenQuotePage} />;
