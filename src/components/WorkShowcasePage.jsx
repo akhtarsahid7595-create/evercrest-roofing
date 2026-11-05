@@ -4,14 +4,14 @@ import Footer from './Footer';
 import SeoHead from './SeoHead';
 
 const workItems = [
-  { image: '/images/work-01-team.jpg', alt: 'Evercrest Roofing team member working at a roofline', title: 'Roofline and chimney work', category: 'Roofing work' },
-  { image: '/images/work-02-velux-interior.jpg', alt: 'VELUX roof window viewed from inside a room', title: 'VELUX roof window', category: 'Roof windows' },
-  { image: '/images/work-03-velux-installation.jpg', alt: 'VELUX roof window fitted into a slate roof', title: 'Roof window installation', category: 'Roof windows' },
-  { image: '/images/work-04-roof-structure.jpg', alt: 'Timber roof structure under construction', title: 'Roof structure work', category: 'Roofing work' },
-  { image: '/images/work-05-roof-battens.jpg', alt: 'Roof battens and breathable membrane beside a chimney', title: 'Roof preparation and battens', category: 'Roofing work' },
-  { image: '/images/work-06-chimney-repair.jpg', alt: 'Roof repair around an older brick chimney', title: 'Chimney and roof repairs', category: 'Roofing work' },
-  { image: '/images/work-07-slate-roof.jpg', alt: 'Slate roof with an opening prepared for a roof window', title: 'Slate roof and roof window work', category: 'Roof windows' },
-  { image: '/images/work-08-flat-roof.jpg', alt: 'Flat roof membrane with rooflight openings', title: 'Flat roof preparation', category: 'Flat roofing' },
+  { image: '/images/work-01-team.jpg', alt: 'Evercrest Roofing team member working at a roofline', title: 'Roofline and chimney work', category: 'Roofing work', href: '/chimney-repairs-dublin/', link: 'Chimney repairs' },
+  { image: '/images/work-02-velux-interior.jpg', alt: 'VELUX roof window viewed from inside a room', title: 'VELUX roof window', category: 'Roof windows', href: '/velux-window-repairs-dublin/', link: 'VELUX window repairs' },
+  { image: '/images/work-03-velux-installation.jpg', alt: 'VELUX roof window fitted into a slate roof', title: 'Roof window installation', category: 'Roof windows', href: '/velux-window-repairs-dublin/', link: 'VELUX window repairs' },
+  { image: '/images/work-04-roof-structure.jpg', alt: 'Timber roof structure under construction', title: 'Roof structure work', category: 'Roofing work', href: '/roof-replacement-dublin/', link: 'Roof replacement' },
+  { image: '/images/work-05-roof-battens.jpg', alt: 'Roof battens and breathable membrane beside a chimney', title: 'Roof preparation and battens', category: 'Roofing work', href: '/roof-replacement-dublin/', link: 'Roof replacement' },
+  { image: '/images/work-06-chimney-repair.jpg', alt: 'Roof repair around an older brick chimney', title: 'Chimney and roof repairs', category: 'Roofing work', href: '/chimney-repairs-dublin/', link: 'Chimney repairs' },
+  { image: '/images/work-07-slate-roof.jpg', alt: 'Slate roof with an opening prepared for a roof window', title: 'Slate roof and roof window work', category: 'Roof windows', href: '/slate-roof-repair-dublin/', link: 'Slate roof repair' },
+  { image: '/images/work-08-flat-roof.jpg', alt: 'Flat roof membrane with rooflight openings', title: 'Flat roof preparation', category: 'Flat roofing', href: '/flat-roofing-dublin/', link: 'Flat roofing' },
 ];
 
 export default function WorkShowcasePage({ onOpenQuote }) {
@@ -44,9 +44,20 @@ export default function WorkShowcasePage({ onOpenQuote }) {
                   <div className="p-5">
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#3B6991]">{item.category}</p>
                     <h3 className="mt-2 font-heading text-xl font-extrabold text-[#0A1E30]">{item.title}</h3>
+                    <a href={item.href} className="mt-3 inline-flex text-sm font-bold text-[#3B6991] hover:text-[#0A1E30]">Explore {item.link} <span aria-hidden="true" className="ml-1">→</span></a>
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F5F7FA] px-4 py-14 sm:px-[6%] sm:py-18">
+          <div className="mx-auto max-w-7xl">
+            <p className="eyebrow-jg mb-2">Related services</p>
+            <h2 className="font-heading text-3xl font-black text-[#0A1E30]">See the service behind the work</h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {[['Roof repairs', '/roof-repairs-dublin/'], ['Roof replacement', '/roof-replacement-dublin/'], ['VELUX window repairs', '/velux-window-repairs-dublin/'], ['Chimney repairs', '/chimney-repairs-dublin/'], ['Flat roofing', '/flat-roofing-dublin/'], ['Slate roof repair', '/slate-roof-repair-dublin/']].map(([label, href]) => <a key={href} href={href} className="rounded-full border border-[#C9D6E0] bg-white px-4 py-2 text-sm font-bold text-[#0A2943] transition hover:border-[#0A2943] hover:bg-[#0A2943] hover:text-white">{label}</a>)}
             </div>
           </div>
         </section>
