@@ -30,7 +30,37 @@ export default function QuotePage({ onGoHome }) {
 
 ⏰ Time: ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}`;
 
-      // Send to both Web3Forms and Telegram simultaneously
+      const sendTelegram = async () => {
+        try {
+          // 1. First try serverless function on same origin (bypasses CORS & adblockers)
+          const serverRes = await fetch('/api/telegram', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: formData.name,
+              phone: formData.phone,
+              service: formData.service,
+              location: formData.location,
+              notes: formData.notes
+            })
+          });
+          if (serverRes.ok) return;
+        } catch (_) {}
+
+        // 2. Direct fallback
+        try {
+          await fetch('https://api.telegram.org/bot9216010977:AAHtrxm4fAc9IIGr56V9zDSw-400zEb_n4Q/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: '5235553652',
+              text: telegramText
+            })
+          });
+        } catch (_) {}
+      };
+
+      // Send to both Web3Forms and Telegram concurrently
       const [web3Response] = await Promise.all([
         fetch("https://api.web3forms.com/submit", {
           method: "POST",
@@ -48,16 +78,7 @@ export default function QuotePage({ onGoHome }) {
             subject: `New Roofing Quote Request from ${formData.name} - Evercrest Roofing`
           })
         }),
-        fetch("https://api.telegram.org/bot9216010977:AAHtrxm4fAc9IIGr56V9zDSw-400zEb_n4Q/sendMessage", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            chat_id: "5235553652",
-            text: telegramText
-          })
-        }).catch((tgErr) => console.warn("Telegram notification error:", tgErr))
+        sendTelegram()
       ]);
 
       const result = await web3Response.json();
