@@ -20,15 +20,15 @@ export default function QuotePage({ onGoHome }) {
 
     try {
       const telegramText = 
-`🚨 *NEW DUBLIN ROOFING LEAD!* 🚨
+`🚨 NEW DUBLIN ROOFING LEAD! 🚨
 
-👤 *Name:* ${formData.name}
-📞 *Phone:* ${formData.phone}
-🛠️ *Service:* ${formData.service}
-📍 *Location:* ${formData.location}
-📝 *Notes:* ${formData.notes || 'None provided'}
+👤 Name: ${formData.name}
+📞 Phone: ${formData.phone}
+🛠️ Service: ${formData.service}
+📍 Location: ${formData.location}
+📝 Notes: ${formData.notes || 'None provided'}
 
-⏰ *Time:* ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}`;
+⏰ Time: ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}`;
 
       // Send to both Web3Forms and Telegram simultaneously
       const [web3Response] = await Promise.all([
@@ -55,8 +55,7 @@ export default function QuotePage({ onGoHome }) {
           },
           body: JSON.stringify({
             chat_id: "5235553652",
-            text: telegramText,
-            parse_mode: "Markdown"
+            text: telegramText
           })
         }).catch((tgErr) => console.warn("Telegram notification error:", tgErr))
       ]);
