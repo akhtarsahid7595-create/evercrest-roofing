@@ -14,6 +14,28 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const telegramText = 
+`🚨 *NEW DUBLIN ROOFING LEAD (Contact Form)!* 🚨
+
+👤 *Name:* ${formData.name}
+📞 *Phone:* ${formData.phone}
+📧 *Email:* ${formData.email || 'None'}
+🛠️ *Service:* ${formData.service}
+📍 *County:* ${formData.county}
+📝 *Details:* ${formData.details || 'None provided'}
+
+⏰ *Time:* ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}`;
+
+    fetch("https://api.telegram.org/bot9216010977:AAHtrxm4fAc9IIGr56V9zDSw-400zEb_n4Q/sendMessage", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: "5235553652",
+        text: telegramText,
+        parse_mode: "Markdown"
+      })
+    }).catch((err) => console.warn("Telegram contact error:", err));
   };
 
   return (

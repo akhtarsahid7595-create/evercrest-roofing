@@ -19,24 +19,49 @@ export default function QuotePage({ onGoHome }) {
     setErrorMsg('');
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          access_key: "d163ec57-c683-4db7-99e6-5caf7d8e6620",
-          name: formData.name,
-          phone: formData.phone,
-          service: formData.service,
-          location: formData.location,
-          message: formData.notes || "No extra notes provided",
-          subject: `New Roofing Quote Request from ${formData.name} - Evercrest Roofing`
-        })
-      });
+      const telegramText = 
+`🚨 *NEW DUBLIN ROOFING LEAD!* 🚨
 
-      const result = await response.json();
+👤 *Name:* ${formData.name}
+📞 *Phone:* ${formData.phone}
+🛠️ *Service:* ${formData.service}
+📍 *Location:* ${formData.location}
+📝 *Notes:* ${formData.notes || 'None provided'}
+
+⏰ *Time:* ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}`;
+
+      // Send to both Web3Forms and Telegram simultaneously
+      const [web3Response] = await Promise.all([
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            access_key: "d163ec57-c683-4db7-99e6-5caf7d8e6620",
+            name: formData.name,
+            phone: formData.phone,
+            service: formData.service,
+            location: formData.location,
+            message: formData.notes || "No extra notes provided",
+            subject: `New Roofing Quote Request from ${formData.name} - Evercrest Roofing`
+          })
+        }),
+        fetch("https://api.telegram.org/bot9216010977:AAHtrxm4fAc9IIGr56V9zDSw-400zEb_n4Q/sendMessage", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            chat_id: "5235553652",
+            text: telegramText,
+            parse_mode: "Markdown"
+          })
+        }).catch((tgErr) => console.warn("Telegram notification error:", tgErr))
+      ]);
+
+      const result = await web3Response.json();
 
       if (result.success) {
         setSubmitted(true);
