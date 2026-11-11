@@ -44,6 +44,20 @@ export default function Footer() {
         </div>
 
       </div>
+
+      {/* Counties We Serve Strip */}
+      <div className="max-w-7xl mx-auto mt-10 pt-8 border-t border-[#1E344A]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#8AA0B8]">
+          <span className="font-bold text-slate-200 shrink-0">Counties We Cover:</span>
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-3 gap-y-1 text-slate-300">
+            {['Dublin', 'Meath', 'Kildare', 'Wicklow', 'Louth', 'Westmeath', 'Offaly', 'Laois', 'Longford', 'Carlow', 'Kilkenny', 'Wexford'].map((county) => (
+              <span key={county} className="hover:text-white transition-colors">
+                Co. {county}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

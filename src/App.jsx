@@ -115,7 +115,7 @@ export default function App() {
         <GallerySection onOpenQuote={handleOpenQuotePage} />
 
         {/* 8. Areas We Cover Section */}
-        <AreasWeCover />
+        <AreasWeCover onOpenQuote={handleOpenQuotePage} />
 
         {/* 9. FAQ Section */}
         <FaqSection />

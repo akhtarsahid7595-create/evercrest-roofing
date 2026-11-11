@@ -70,6 +70,9 @@ export default function Header({ onOpenQuote }) {
                     {area.label}
                   </a>
                 ))}
+                <a href={homeLink('areas')} className="block rounded-md px-3 py-2 text-xs font-bold text-[#3B6991] border-t border-[#E1E7ED] mt-1 pt-2 hover:bg-[#F0F5F8]">
+                  + All 12 Leinster Counties →
+                </a>
               </div>
             </div>
           </div>
@@ -141,6 +144,9 @@ export default function Header({ onOpenQuote }) {
                       {area.label}
                     </a>
                   ))}
+                  <a href={homeLink('areas')} onClick={() => setMobileMenuOpen(false)} className="block py-2 text-xs font-bold text-[#0F2942]">
+                    + All 12 Leinster Counties →
+                  </a>
                 </div>
               )}
             </div>

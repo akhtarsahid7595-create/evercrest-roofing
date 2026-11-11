@@ -505,6 +505,41 @@ export default function ServicePage({ data, onOpenQuote }) {
               ))}
             </div>
 
+            {/* Complete Leinster Counties Strip */}
+            <div className="mt-8 max-w-5xl mx-auto p-6 rounded-xl border border-[#1E344A] bg-[#0F2942]/40">
+              <div className="text-center mb-4">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#5A8BAF]">
+                  Provincial Leinster Service
+                </span>
+                <h4 className="text-lg font-bold text-white mt-1">
+                  We Also Travel Across All 12 Leinster Counties
+                </h4>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {[
+                  { name: 'Meath', desc: 'Navan, Ashbourne, Dunboyne' },
+                  { name: 'Kildare', desc: 'Naas, Newbridge, Celbridge' },
+                  { name: 'Wicklow', desc: 'Bray, Greystones, Arklow' },
+                  { name: 'Louth', desc: 'Drogheda, Dundalk' },
+                  { name: 'Westmeath', desc: 'Mullingar, Athlone' },
+                  { name: 'Offaly', desc: 'Tullamore, Edenderry' },
+                  { name: 'Laois', desc: 'Portlaoise, Portarlington' },
+                  { name: 'Longford', desc: 'Longford Town' },
+                  { name: 'Carlow', desc: 'Carlow Town, Tullow' },
+                  { name: 'Kilkenny', desc: 'Kilkenny City' },
+                  { name: 'Wexford', desc: 'Wexford Town, Gorey' }
+                ].map((c) => (
+                  <span
+                    key={c.name}
+                    className="inline-flex items-center gap-1 text-xs bg-[#1A3857] hover:bg-[#254F7A] text-slate-200 px-3 py-1.5 rounded-lg border border-[#2B547E] transition-colors"
+                  >
+                    <MapPin className="w-3 h-3 text-[#5A8BAF]" />
+                    <strong className="text-white">Co. {c.name}</strong> ({c.desc})
+                  </span>
+                ))}
+              </div>
+            </div>
+
             <div className="mt-10 text-center">
               <p className="text-slate-300 text-sm mb-4">
                 Not sure if we cover your area? Give Josh or Mick a quick call.

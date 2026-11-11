@@ -256,11 +256,24 @@ export default function QuotePage({ onGoHome }) {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. South Dublin, Tallaght, Swords"
+                    placeholder="e.g. Dublin, Meath, Kildare, Wicklow..."
                     value={formData.location}
                     onChange={(e) => setFormData({...formData, location: e.target.value})}
                     className="w-full px-4 py-3 rounded-lg bg-[#F5F7FA] border border-[#E1E7ED] text-[#0A1E30] text-sm focus:outline-none focus:border-[#0F2942] focus:bg-white transition-all font-medium"
                   />
+                  <div className="mt-2 flex flex-wrap gap-1 text-[11px]">
+                    <span className="text-[#5A6A7A] self-center mr-1">Quick pick:</span>
+                    {['Dublin', 'Meath', 'Kildare', 'Wicklow', 'Louth', 'Westmeath', 'Offaly', 'Laois', 'Longford', 'Carlow', 'Kilkenny', 'Wexford'].map((co) => (
+                      <button
+                        type="button"
+                        key={co}
+                        onClick={() => setFormData({...formData, location: `Co. ${co}`})}
+                        className="px-2 py-0.5 rounded bg-slate-100 hover:bg-[#3B6991] hover:text-white text-[#0A1E30] border border-slate-200 transition-colors font-medium"
+                      >
+                        {co}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 <div>
