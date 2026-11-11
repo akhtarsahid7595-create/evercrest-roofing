@@ -100,26 +100,28 @@ export default function AreasWeCover({ onOpenQuote }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4">
             {leinsterCounties.map((c) => (
               <div
                 key={c.name}
-                className="p-4 rounded-xl border border-[#1E344A] bg-[#0A1E30]/80 hover:border-[#5A8BAF] transition-all group"
+                className="p-3 sm:p-4 rounded-xl border border-[#1E344A] bg-[#0A1E30]/80 hover:border-[#5A8BAF] transition-all group flex flex-col justify-between"
               >
-                <div className="flex items-center justify-between mb-1">
-                  <span className="font-heading font-extrabold text-white text-base group-hover:text-[#5A8BAF] transition-colors flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#5A8BAF]" />
-                    County {c.name}
-                  </span>
-                  {c.badge && (
-                    <span className="text-[10px] bg-[#1E3E60] text-emerald-300 px-2 py-0.5 rounded-full font-bold">
-                      {c.badge}
+                <div>
+                  <div className="flex items-center justify-between gap-1 mb-1">
+                    <span className="font-heading font-extrabold text-white text-xs sm:text-base group-hover:text-[#5A8BAF] transition-colors flex items-center gap-1">
+                      <MapPin className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#5A8BAF] shrink-0" />
+                      Co. {c.name}
                     </span>
-                  )}
+                    {c.badge && (
+                      <span className="text-[9px] sm:text-[10px] bg-[#1E3E60] text-emerald-300 px-1.5 py-0.5 rounded-full font-bold shrink-0">
+                        {c.badge}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-[11px] sm:text-xs text-slate-300 leading-snug mt-1">
+                    {c.desc}
+                  </p>
                 </div>
-                <p className="text-xs text-slate-300 leading-snug mt-1">
-                  {c.desc}
-                </p>
               </div>
             ))}
           </div>

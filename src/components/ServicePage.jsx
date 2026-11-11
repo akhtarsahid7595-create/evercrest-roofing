@@ -506,37 +506,54 @@ export default function ServicePage({ data, onOpenQuote }) {
             </div>
 
             {/* Complete Leinster Counties Strip */}
-            <div className="mt-8 max-w-5xl mx-auto p-6 rounded-xl border border-[#1E344A] bg-[#0F2942]/40">
-              <div className="text-center mb-4">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#5A8BAF]">
-                  Provincial Leinster Service
+            <div className="mt-8 max-w-5xl mx-auto p-4 sm:p-7 rounded-2xl border border-[#1E344A] bg-[#0F2942]/50 shadow-md">
+              <div className="text-center mb-5">
+                <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#5A8BAF]">
+                  <MapPin className="w-3.5 h-3.5 text-[#5A8BAF]" /> Provincial Leinster Service
                 </span>
-                <h4 className="text-lg font-bold text-white mt-1">
+                <h4 className="text-xl sm:text-2xl font-black font-heading text-white mt-1">
                   We Also Travel Across All 12 Leinster Counties
                 </h4>
+                <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl mx-auto">
+                  Mobile roofing teams equipped for emergency repairs, flat roofs, and full re-roofing across Leinster.
+                </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
+
+              {/* Responsive 2-column mobile / 4-column desktop grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
                 {[
-                  { name: 'Meath', desc: 'Navan, Ashbourne, Dunboyne' },
-                  { name: 'Kildare', desc: 'Naas, Newbridge, Celbridge' },
-                  { name: 'Wicklow', desc: 'Bray, Greystones, Arklow' },
-                  { name: 'Louth', desc: 'Drogheda, Dundalk' },
-                  { name: 'Westmeath', desc: 'Mullingar, Athlone' },
-                  { name: 'Offaly', desc: 'Tullamore, Edenderry' },
-                  { name: 'Laois', desc: 'Portlaoise, Portarlington' },
-                  { name: 'Longford', desc: 'Longford Town' },
-                  { name: 'Carlow', desc: 'Carlow Town, Tullow' },
-                  { name: 'Kilkenny', desc: 'Kilkenny City' },
-                  { name: 'Wexford', desc: 'Wexford Town, Gorey' }
+                  { name: 'Meath', towns: 'Navan, Ashbourne' },
+                  { name: 'Kildare', towns: 'Naas, Celbridge' },
+                  { name: 'Wicklow', towns: 'Bray, Greystones' },
+                  { name: 'Louth', towns: 'Drogheda, Dundalk' },
+                  { name: 'Westmeath', towns: 'Mullingar, Athlone' },
+                  { name: 'Offaly', towns: 'Tullamore, Edenderry' },
+                  { name: 'Laois', towns: 'Portlaoise, Portarlington' },
+                  { name: 'Longford', towns: 'Longford Town' },
+                  { name: 'Carlow', towns: 'Carlow, Tullow' },
+                  { name: 'Kilkenny', towns: 'Kilkenny City' },
+                  { name: 'Wexford', towns: 'Wexford, Gorey' },
+                  { name: 'Dublin', towns: 'All City & Suburbs' }
                 ].map((c) => (
-                  <span
+                  <div
                     key={c.name}
-                    className="inline-flex items-center gap-1 text-xs bg-[#1A3857] hover:bg-[#254F7A] text-slate-200 px-3 py-1.5 rounded-lg border border-[#2B547E] transition-colors"
+                    className="p-2.5 sm:p-3 rounded-lg border border-[#234A70] bg-[#163857]/60 hover:border-[#5A8BAF] transition-colors flex flex-col justify-center"
                   >
-                    <MapPin className="w-3 h-3 text-[#5A8BAF]" />
-                    <strong className="text-white">Co. {c.name}</strong> ({c.desc})
-                  </span>
+                    <span className="font-heading font-extrabold text-white text-xs sm:text-sm flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-[#5A8BAF] shrink-0" />
+                      Co. {c.name}
+                    </span>
+                    <span className="text-[10px] sm:text-[11px] text-slate-300 truncate mt-0.5">
+                      {c.towns}
+                    </span>
+                  </div>
                 ))}
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-[#1E344A] text-center">
+                <span className="text-[11px] sm:text-xs text-slate-300">
+                  ⚡ <strong>Free inspections</strong> arranged for properties across Dublin & Leinster.
+                </span>
               </div>
             </div>
 
